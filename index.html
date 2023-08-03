@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="shortcut icon" href="./img/favicon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../slick.css">
+    <link rel="stylesheet" href="../slick-theme.css">
+    <script src="https://kit.fontawesome.com/43c95197f5.js" crossorigin="anonymous"></script>
+    <script src="./script/jquery-3.7.0.min.js"></script>
+    <script src="./script/bootstrap.min.js"></script>
+    <script src="../slick.min.js"></script>
+    <script src="./script/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./img/logo.png" alt="logo">
+                        </a>
+                        <p hidden>Seoul Philharmonic Orchestra</p>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <ul class="menu">
+                        <li><a href="#">공연/예매</a>
+                            <ul class="submenu">
+                                <li><a href="#">공연일정</a></li>
+                                <li><a href="#">공연소개</a></li>
+                                <li><a href="#">시즌패키지</a></li>
+                                <li><a href="#">예매안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">교육</a>
+                            <ul class="submenu">
+                                <li><a href="#">교육프로그램</a></li>
+                                <li><a href="#">청소년·청년</a></li>
+                                <li><a href="#">키즈콘서트</a></li>
+                                <li><a href="#">행복한 음악회</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">오케스트라</a>
+                            <ul class="submenu">
+                                <li><a href="#">음악감독</a></li>
+                                <li><a href="#">단원</a></li>
+                                <li><a href="#">수석객원지휘자</a></li>
+                                <li><a href="#">부지휘자</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">시향소식</a>
+                            <ul class="submenu">
+                                <li><a href="#">새소식</a></li>
+                                <li><a href="#">채용/오디션</a></li>
+                                <li><a href="#">미디어</a></li>
+                                <li><a href="#">올해의 음악가</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">후원 협찬사</a>
+                            <ul class="submenu">
+                                <li><a href="#">후원소개</a></li>
+                                <li><a href="#">협찬사</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <button type="button">공연일정
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </button>
+                    <select>
+                        <option>kor</option>
+                        <option>eng</option>
+                    </select>
+                    <div class="ham">
+                        <button type="button" class="open">
+                            <i class="fa-solid fa-bars fa-3x" style="color: #f9a52f;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <button type="button" class="close">
+                <i class="fa-solid fa-xmark fa-2x" style="color: #f9a52f;"></i>
+            </button>
+            <ul>
+                <li><a href="#">
+                        공연예매
+                        <i class="fa-solid fa-play" style="color: #e15656;"></i>
+                    </a>
+                </li>
+                <li><a href="#">교육
+                        <i class="fa-solid fa-play" style="color: #e15656;"></i>
+                    </a>
+                </li>
+                <li><a href="#">오케스트라
+                        <i class="fa-solid fa-play" style="color: #e15656;"></i>
+                    </a>
+                </li>
+                <li><a href="#">시향소식
+                        <i class="fa-solid fa-play" style="color: #e15656;"></i>
+                    </a>
+                </li>
+                <li><a href="#">후원 / 협찬사
+                        <i class="fa-solid fa-play" style="color: #e15656;"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="search">
+                <p>통합검색</p>
+                <form>
+                    <input type="search" placeholder="서울시향" onfocus="this.placeholder=''"
+                    onblur="this.placeholder='서울시향'">
+                    <button type="button">
+                        <i class="fa-solid fa-magnifying-glass fa-2x" style="color: #f9a52f;"></i>
+                    </button>
+                </form>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="main">
+            <h1 hidden>main</h1>
+            <div class="m_title">
+                <h1> Seoul<br>Philharmonic<br>Orchestra</h1>
+            </div>
+            <video muted autoplay>
+                <source src="./video/vllo.MP4">
+            </video>
+            <div class="topbox">
+                <figure>
+                    <img src="./img/topbox.png" alt="tbox">
+                </figure>
+                <div class="toptext">
+                    <h3><span>SPO</span>매거진 보러가기</h3>
+                    <p>서울시향은 회원과 관객들에게 풍성한 정보를
+                        제공하고자, 2006년부터 국내 교향악단 중 유일하게 자체 매거진인 월간SPO를 발행하고 있습니다. </p>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right fa-3x" style="color: #000000;"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <div class="title">
+                <h2>
+                    SPO소식
+                </h2>
+                <div class="circle"></div>
+            </div>
+            <div class="newsbox">
+                <div class="box">
+                    <figure>
+                        <img src="./img/box1.jpg" alt="b1">
+                    </figure>
+                    <a href="#" class="textbox">
+                        <h6>
+                            차기 음악감독 Next Music Director
+                        </h6>
+                        <p>Jaap van Zweden
+                        </p>
+                        <span>
+                            현 뉴욕 필 음악감독,<br>
+                            현 홍콩 필하모닉 음악감독
+                        </span>
+                        <br>
+                        <span>
+                            2023.07.23
+                        </span>
+                    </a>
+                </div>
+                <div class="box">
+                    <figure>
+                        <img src="./img/box2.jpg" alt="b2">
+                    </figure>
+                    <a href="#" class="textbox">
+                        <h6>
+                            공연 및 티켓 판매 안내
+                        </h6>
+                        <p>2023
+                            SEASON<br>
+                            SEOUL
+                            PHILHARMONIC<br>
+                            ORCHESTRA
+                        </p>
+                        <span>
+                            2023.01-2023.12
+                        </span>
+                    </a>
+                </div>
+                <div class="box">
+                    <figure>
+                        <img src="./img/box3.jpg" alt="b3">
+                    </figure>
+                    <a href="#" class="textbox">
+                        <h6>
+                            교육
+                        </h6>
+                        <p>오케스트라 음악교육
+                        </p>
+                        <span>
+                            다양한 교옥 프로그램을 통해 모든 시민들이<br> 클래식 음악을 향유할 수 있도록
+                            삶의 질적 향상에 기여하겠습니다.
+                        </span>
+                        <br>
+                        <span>
+                            2023.07.06
+                        </span>
+                    </a>
+                </div>
+                <div class="box">
+                    <figure>
+                        <img src="./img/box4.jpg" alt="b4">
+                    </figure>
+                    <a href="#" class="textbox">
+                        <h6>
+                            SPO 매거진
+                        </h6>
+                        <p>
+                            Vol.211
+                        </p>
+                        <span>
+                            회원과 관객들에게 풍성한 정보를 제공하고자,
+                            2006년부터 국내 교향악단 중 유일하게 자체 매거진인 월간SPO를 발행하고 있습니다.
+                        </span>
+                        <br>
+                        <span>
+                            2023.06.09
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="coming">
+            <div class="container">
+                <div class="title">
+                    <h2>Coming Up</h2>
+                    <a href="#">
+                        <span>전체공연일정</span>
+                    </a>
+                    <div class="circle"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 ">
+                        <a href="#" class="box">
+                            <figure>
+                                <img src="./img/spo1.jpg" alt="s1">
+                            </figure>
+                        </a>
+                        <div class="text">
+                            <h5>2023.08.12</h5>
+                            <p>cover story - 바이올리니스트<br>
+                                아우구스틴 하델리히</p>
+                        </div>
+                    </div>
+                    <div class="d-none d-md-block col-md-4">
+                        <a href="#" class="box">
+                            <figure>
+                                <img src="./img/spo2.jpg" alt="s2">
+                            </figure>
+                        </a>
+                        <div class="text">
+                            <h5>2023.09.23</h5>
+                            <p>cover story - 피아니스트<br>
+                                김선욱</p>
+                        </div>
+                    </div>
+                    <div class="d-none d-md-block col-md-4">
+                        <a href="#" class="box">
+                            <figure>
+                                <img src="./img/spo3.jpg" alt="s3">
+                            </figure>
+                        </a>
+                        <div class="text">
+                            <h5>2023.11.17</h5>
+                            <p>cover story - 피아니스트<br>
+                                프랑수아 프레데리크 기</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="vision">
+            <div class="container">
+                <div class="title">
+                    <h2>Vision</h2>
+                    <div class="circle"></div>
+                </div>
+                <p class="p">"예술적 요청과 공공적 요청을 조화롭게 구현하는 21세기 지속 가능 오케스트라"</p>
+                <div class="row">
+                    <!-- d-none d-md-block col-md-4 -->
+                    <div class="col-12 d-sm-block col-sm-6 box1">
+                        <h4><span>서울시향</span>은 대한민국을 대표하는 <span>문화 브랜드</span>로
+                            자리매김 하기 위해 다양한 공연을 무대로 올리며 쉼없는 담금질을
+                            통해 비약적인 질적, 양적 발전을 이뤄내고 있습니다.
+                        </h4>
+                        <p> 서울시향은 2005년 재단법인으로 독립한 이후,
+                            첫 음악감독인 정명훈 지휘자의 리더십 아래 폭넓은 레퍼토리를
+                            선보이며<span>국제적으로 성장</span>하였고, 2024년부터는 뉴욕 필하모닉
+                            오케스트라음악감독으로 활동 중인 네덜란드 출신 얍 판 츠베덴 지휘자가 서울시향
+                            제3대 음악감독으로 활동할 예정이다. 서울시향은 서울시민들에게 사랑받는 다양한 교육 프로그램을 통해<span>클래식 음악의 저변 확대</span>
+                            는 물론 <span>전문 연주자 양성</span>을 위해서도 노력을 기울이고 있다.
+                        </p>
+                    </div>
+                    <div class="d-none d-sm-block col-sm-6 box1">
+                        <figure>
+                            <img src="./img/v-1.png" alt="v1">
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-none d-sm-block col-sm-6 box2">
+                        <figure>
+                            <img src="./img/v-2.png" alt="v2">
+                        </figure>
+                    </div>
+                    <div class="d-none d-sm-block col-sm-6 box2">
+                        <div class="box">
+                            <!--width값 줘서 박스 줄이기 ex)80%?-->
+                            <ul>
+                                <li>예술 부문 안정화 및 역량강화</li>
+                                <li>시민 소통과 지역사회 동반성장</li>
+                                <li>경영구조 개선 및 건전성 확보</li>
+                                <li>예술적 리더십 체계 구축</li>
+                            </ul>
+                            <div class="list">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="youtube">
+            <div class="container">
+                <div class="title">
+                    <h2>SPO영상</h2>
+                    <span>MORE<i class="fa-solid fa-angle-right" style="color: #000000;"></i></span>
+                    <div class="circle"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-sm-block col-sm-6 col-md-4">
+                        <div class="youbox">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/cvQLcmp2pks"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a href="#">
+                            <h5>[메시지] 얍 판 츠베덴이 새로운 시작을 말하다</h5>
+                            <span>2023.07.21</span>
+                        </a>
+                    </div>
+                    <div class="d-none d-sm-block col-sm-6 col-md-4">
+                        <div class="youbox">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y8kvJ_dd_QA"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a href="#">
+                            <h5>[7/20&21] 얍 판 츠베덴의 베토벤과 차이콥스키 예고편</h5>
+                            <span>2023.07.01</span>
+                        </a>
+                    </div>
+                    <div class="d-none d-md-block col-md-4">
+                        <div class="youbox">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/eYzFlkJ91QQ"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a href="#">
+                            <h5>[6/29&30] 미하일 플레트뇨프와 선우예권 예고편</h5>
+                            <span>2023.06.16</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-none d-sm-block col-sm-6 col-md-4">
+                        <div class="youbox">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-i-EVv7aZAk"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a href="#">
+                            <h5>[5/11&12] 마르쿠스 슈텐츠의 바그너 '반지' 예고편</h5>
+                            <span>2023.05.07</span>
+                        </a>
+                    </div>
+                    <div class="d-none d-sm-block col-sm-6 col-md-4">
+                        <div class="youbox">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qYjZ-_A7BtI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a href="#">
+                            <h5>[5/18&19] 마르쿠스 슈텐츠와 조슈아 벨 예고편</h5>
+                            <span>2023.05.02</span>
+                        </a>
+                    </div>
+                    <div class="d-none d-md-block col-md-4">
+                        <div class="youbox">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/5e7hg59jaIc"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a href="#">
+                            <h5>[4/19&20] 피에르로랑 에마르의 리게티 피아노협주곡 예고편</h5>
+                            <span>2023.04.14</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="letter">
+            <div class="container">
+                <h1 hidden>news letter</h1>
+                <div class="row">
+                    <div class="col-7 nop">
+                        <figure>
+                            <img src="./img/letter.jpg" alt="letter">
+                        </figure>
+                    </div>
+                    <div class="col-5">
+                        <div class="newstext">
+                            <h1>News Letter</h1>
+                            <p>SPO 뉴스레터를 구독하세요!</p>
+                        </div>
+                        <div class="newsbox">
+                            <form>
+                                <input type="text" placeholder="이메일을 입력하세요." onfocus="this.placeholder=''"
+                                onblur="this.placeholder='이메일을 입력하세요.'">
+                            </form>
+                            <button type="button">요청하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="spon">
+            <div class="title">
+                <h2>Sponsored by</h2>
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+            </div>
+
+            <div class="slidebox">
+                <div class="allbox">
+                    <div class="box">
+                        <figure>
+                            <img src="./img/문화체육.jpg" alt="hana">
+                        </figure>
+                    </div>
+                    <div class="box">
+                        <figure>
+                            <img src="./img/코리안리보험.jpg" alt="hana">
+                        </figure>
+                    </div>
+                    <div class="box">
+                        <figure>
+                            <img src="./img/아트누리.png" alt="hana">
+                        </figure>
+                    </div>
+                    <div class="box">
+                        <figure>
+                            <img src="./img/서울특별시.jpg" alt="hana">
+                        </figure>
+                    </div>
+                    <div class="box">
+                        <figure>
+                            <img src="./img/하나금융.jpg" alt="hana">
+                        </figure>
+                    </div>
+                    <div class="box">
+                        <figure>
+                            <img src="./img/google.jpg" alt="hana">
+                        </figure>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <a href="#" class="flogo">
+                <img src="./img/logo_b.png" alt="flogo">
+            </a>
+            <div class="ftext">
+                <ul class="f_menu">
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Naver</a></li>
+                </ul>
+            </div>
+            <div class="copy">
+                <p>사업자등록번호 101-82-13065 | 통신판매업소신고 종로 제01-3466호<br>
+                    (재)서울시립교향악단 | 03172 서울시 종로구 세종대로 175 | TEL : 1588-1210 | FAX : 02-3700-6365</p>
+                <span>COPYRIGHT &#169;2019 SEOUL PHILHARMONIC ORCHESTRA. ALL RIGHTS RESERVED.</span>
+            </div>
+            <button type="button" class="up top">
+                <i class="fa-solid fa-arrow-up fa-2x" style="color: #000000;"></i>
+            </button>
+        </footer>
+    </main>
+</body>
+
+</html>

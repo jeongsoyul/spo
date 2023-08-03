@@ -1,0 +1,1384 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+figure {
+    width: fit-content;
+    height: fit-content;
+}
+
+html {
+    font-size: 15px;
+}
+
+/* font : rem주기 em도 ㄱㅊ */
+header {
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    color: #fff;
+    z-index: 99;
+    transition: .5s;
+}
+
+header .logo {
+    margin: 10px 0;
+    width: fit-content;
+    height: fit-content;
+    min-width: 160px;
+}
+
+header:hover {
+    background-color: #fff;
+    color: black;
+}
+
+/* hover했을 떄 색상 바로 변하게  
+제이쿼리 사용해서 로고도 바껴야함*/
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    margin-left: 3%;
+}
+
+.menu>li {
+    width: 18%;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.menu>li>a {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.submenu {
+    font-size: 0.9rem;
+    line-height: 40px;
+    margin-top: 10%;
+    display: none;
+
+}
+
+.submenu>li:hover {
+    font-weight: 900;
+}
+
+header .col-2>button {
+    padding: 3px 4px;
+    margin-top: 3.5vh;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-right: 4%;
+}
+
+header .col-2>button:hover{
+    transform: scale(1.05);
+}
+
+header select:hover{
+    transform: scale(1.05);
+}
+header:hover .col-2>button {
+    color: #000;
+    border: 1px solid #000;
+
+}
+
+header select {
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+/* 함버튼 */
+header .ham button {
+    position: absolute;
+    top: -10%;
+    right: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+nav .close {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+
+nav ul {
+    margin: auto;
+    width: 90%;
+    margin-top: 100px;
+    font-weight: 600;
+}
+
+nav ul li {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    transition: .2s;
+}
+nav ul li a{
+    display: block;
+}
+
+nav ul li:hover {
+    color: #e15656;
+}
+
+nav .search {
+    width: 100%;
+    height:150px;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+}
+
+nav .search p {
+    font-size: 1.3rem;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-weight: 900;
+}
+
+nav .search input {
+    width: 200px;
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #808080;
+}
+
+nav .search button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* ul 크기랑 간격 줄여서 얘네가 가로로 들어가게 만들기 즉 넘치지 않게 만들기  */
+/* main시작 */
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.main video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .m_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* 타이틀 나타나게 */
+.main .m_title h1 {
+    font-size: 3.5rem;
+}
+
+.main .topbox {
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    color: #000;
+}
+
+.main .topbox .toptext {
+    position: absolute;
+    top: 25%;
+    margin: 0 5%;
+    text-align: center;
+}
+
+.main .topbox .toptext p {
+    text-align: center;
+    line-height: 25px;
+}
+
+.main .topbox .toptext h3 {
+    margin: 7% 0;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.main .topbox .toptext h3 span {
+    color: #fff;
+}
+
+.main .topbox .toptext a {
+    margin-left: 40%;
+    /* mouse over 했을 때 화살표 나타나게  */
+}
+/* news */
+.news {
+    width: 80%;
+    position: relative;
+    margin: 10% 0;
+    margin-left: 18%;
+}
+
+/* title다 똑같이 주기  */
+.news .title {
+    position: relative;
+    margin: 10vh 0;
+}
+
+.news .title h2 {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.news .title .circle {
+    width: 25Px;
+    height: 25px;
+    background-color: rgba(255, 183, 0, 0.7);
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+.news .position{
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsbox .box {
+    width: 96%;
+}
+
+.newsbox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.newsbox .textbox h6 {
+    font-weight: 900;
+    margin: 5% 0;
+}
+
+.newsbox .textbox p {
+    font-size: 1.3rem;
+}
+
+.newsbox .textbox span {
+    width: 90%;
+    display: inline-block;
+    color: #808080;
+    margin-bottom: 5%;
+}
+
+.newsbox .textbox span:last-child {
+    font-size: .9rem;
+}
+
+.news figure img {
+    cursor: pointer;
+    transition: .5s;
+}
+
+.news figure img {
+    opacity: .7;
+}
+
+.news .box:hover figure img {
+    opacity: 1;
+}
+
+.news .box:hover span {
+    color: #000;
+}
+
+/* comuing */
+.coming {
+    margin: 13% 0;
+}
+
+.coming .title {
+    position: relative;
+    margin: 10vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.coming .title h2 {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.coming .title a span {
+    font-size: 1.2rem;
+}
+
+.coming .title span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.coming .col-4:hover p {
+    text-decoration: underline;
+}
+
+.coming .title .circle {
+    width: 25Px;
+    height: 25px;
+    background-color: rgba(255, 183, 0, 0.7);
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+
+/* 컨테이너 안에서 간격주기 */
+.coming .box {
+    display: block;
+    width: 98%;
+    margin: auto;
+    border: 1px solid #808080;
+    padding: 2% 5%;
+}
+
+.coming .text {
+    width: 98%;
+    margin: auto;
+}
+
+.coming .text h5 {
+    font-size: 1.7rem;
+    margin: 5% 0;
+    font-weight: 600;
+}
+
+.coming .text p {
+    font-size: 1.2rem;
+    color: #808080;
+}
+
+.coming .text p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.coming h5 {
+    cursor: pointer;
+}
+
+/* vision */
+.vision {
+    width: 100%;
+    background-image: url(../img/배경.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.vision .title {
+    position: relative;
+    margin-bottom: 20%;
+}
+
+.vision .title h2 {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.vision .title .circle {
+    width: 25Px;
+    height: 25px;
+    background-color: rgba(255, 183, 0, 0.7);
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+
+.vision .p {
+    font-size: 2rem;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.vision .box1 {
+    margin-top: 10%;
+}
+
+.vision h4 {
+    width: 95%;
+    line-height: 35px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.vision h4 span {
+    color: orange;
+}
+
+.vision .box1 p {
+    width: 90%;
+    line-height: 30px;
+}
+
+.vision .box1 p span {
+    color: orange;
+}
+
+/* .vision .box1 figure{
+    margin-left: 10%;
+} */
+.vision .box2 {
+    margin-top: 10%;
+    position: relative;
+}
+
+.vision .box2 ul {
+    margin-left: 30%;
+    margin-top: 15%;
+    font-size: 1.5rem;
+}
+
+.vision .box2 ul li {
+    margin-bottom: 15%;
+}
+
+/* 원이랑 선 */
+.vision .box2 .list {
+    position: absolute;
+    top: 15%;
+    left: 18%;
+}
+
+.vision .box2 .list .box {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: orange;
+    margin-bottom: 55px;
+}
+
+.vision .box2 .list .line {
+    width: 3px;
+    height: 300px;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 45%;
+}
+
+/* youtube */
+/* url가져오기 유튜브 링크 */
+.youtube {
+    margin-bottom: 20%;
+}
+
+.youtube .title {
+    position: relative;
+    margin: 10vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.youtube .title h2 {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 3;
+}
+
+.youtube .title span {
+    font-size: 1.2rem;
+}
+
+.youtube .title span:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+    font-weight: 900;
+}
+
+.youtube .title .circle {
+    width: 25Px;
+    height: 25px;
+    background-color: rgba(255, 183, 0, 0.7);
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+
+.youtube .row {
+    margin-bottom: 10%;
+}
+
+.youtube .youbox {
+    width: 100%;
+    height: 75%;
+    transition: .2s;
+}
+
+.youtube .youbox iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.youtube h5 {
+    margin: 5% 0;
+    margin-left: 1%;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.youtube a>span {
+    position: absolute;
+    bottom: -20%;
+    color: #808080;
+}
+
+.youtube .youbox:hover {
+    transform: scale(1.05);
+}
+
+/* letter */
+.letter .row .col-5 {
+    background-image: url(../img/letter2.jpg);
+    position: relative;
+}
+
+.letter .col-7 {
+    background-color: rebeccapurple;
+}
+
+.letter .nop {
+    padding: 0;
+}
+
+.letter .newstext {
+    color: #fff;
+}
+
+.letter .newstext h1 {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    font-size: 3rem;
+}
+
+.letter .newstext p {
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    font-size: 1.5rem;
+}
+
+.letter .newsbox {
+    position: absolute;
+    left: 10%;
+    top: 40%;
+}
+
+.letter input {
+    width: 240px;
+    height: 50px;
+    text-align: left;
+}
+
+/* click 했을 떄 벨루 사라지게 */
+.letter button {
+    position: absolute;
+    left: 60%;
+    top: -25%;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background-color: #fff;
+    border: none;
+    transition: .2s;
+}
+
+.letter button:hover {
+    background-color: rgb(124, 124, 124);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+ .spon {
+    width: 100%;
+    margin-top: 15%;
+    position: relative;
+}
+
+.spon .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -15%;
+}
+
+.spon .title h2 {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.spon .title .circle1 {
+    width: 30Px;
+    height: 30px;
+    background-color: rgb(251, 69, 69);
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    left: 235px;
+}
+
+.spon .title .circle2 {
+    width: 20Px;
+    height: 20px;
+    background-color: rgb(255, 143, 45);
+    border-radius: 100%;
+    position: absolute;
+    top: 40px;
+    left: 230px;
+}
+
+.slidebox {
+    width: 100%;
+    margin: auto;
+    margin-top: 30%;
+}
+.slidebox .allbox{
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+footer {
+    width: 100%;
+    border-top: 1px solid rgb(255, 166, 0);
+    position: relative;
+}
+
+footer {
+    background-image: url(../img/배경.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+}
+
+footer .flogo {
+    display: block;
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+
+footer .flogo img {
+    margin: 150px auto;
+}
+
+footer .ftext {
+    display: flex;
+    height: 30%;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 1.2rem;
+}
+
+footer .ftext ul {
+    margin-right: 10%;
+    line-height: 35px;
+}
+
+footer .ftext ul li:hover {
+    color: orange;
+    font-weight: 600;
+}
+
+footer .copy {
+    margin-top: 5%;
+}
+
+footer .copy span {
+    color: #808080;
+    font-size: 0.8rem;
+}
+
+footer .copy p {
+    font-size: 0.9rem;
+}
+
+footer>button {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #FFB800;
+    border: none;
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+
+    .news .title h2 {
+        font-size: 2rem;
+    }
+
+    .news .title .circle {
+        top: 15px;
+    }
+
+    .coming .title h2 {
+        font-size: 2rem;
+    }
+
+    .coming .title .circle {
+        top: 15px;
+    }
+
+    .vision .title h2 {
+        font-size: 2rem;
+    }
+
+    .vision .title .circle {
+        top: 15px;
+    }
+
+    .youtube .title h2 {
+        font-size: 2rem;
+    }
+
+    .youtube .title .circle {
+        top: 15px;
+    }
+
+    .spon .title h2 {
+        font-size: 2rem;
+    }
+
+    .spon .title .circle1 {
+        left: 190px;
+    }
+
+    .spon .title .circle2 {
+        left: 185px;
+    }
+
+    .menu>li>a {
+        font-size: 1rem;
+    }
+
+    .submenu {
+        font-size: 0.9rem;
+    }
+
+    header .col-2 button {
+        padding: 4px 4px;
+        font-size: .8rem;
+    }
+
+    header .col-2 select {
+        font-size: .8rem;
+        padding: 4px 1px;
+    }
+
+    .main .topbox {
+        transform: scale(.7);
+    }
+
+    .newsbox .textbox p {
+        font-size: 1rem;
+    }
+
+    .newsbox .textbox span {
+        font-size: .8rem;
+    }
+
+    .vision .p {
+        font-size: 2vw;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+
+    .vision .box2 ul li {
+        margin-bottom: 18%;
+    }
+
+    .youtube h5 {
+        margin: 5% 0;
+        margin-left: 1%;
+        font-size: 1rem;
+    }
+
+    .letter .newstext h1 {
+        font-size: 2.5rem;
+    }
+
+    .letter .newstext p {
+        font-size: 1.2rem;
+    }
+
+    .letter input {
+        width: 200px;
+    }
+
+    /* click 했을 떄 벨루 사라지게 */
+    .letter button {
+        width: 65px;
+        height: 65px;
+    }
+    footer .ftext{
+        margin-top: 10%;
+    }
+
+    /* 끝 */
+}
+
+@media screen and (max-width:991px) {
+
+    .menu {
+        margin-top: 2vh;
+
+    }
+
+    .menu>li>a {
+        font-size: .9rem;
+    }
+
+    .submenu {
+        margin-top: 20%;
+        font-size: .7rem;
+    }
+
+    select {
+        display: none;
+    }
+
+    header .col-2 button {
+        padding: 3px 3px;
+        margin-top: 3vh;
+        font-size: .8rem;
+    }
+
+    .vision h4 {
+        font-size: 1.4rem;
+        line-height: 40px;
+    }
+
+    .vision .box1 p {
+        display: none;
+    }
+
+    .vision .box2 ul {
+        font-size: 1.1rem;
+    }
+
+    .vision .box2 .list .box {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 40px;
+    }
+
+    .vision .box2 .list .line {
+        width: 3px;
+        height: 220px;
+        background-color: orange;
+        position: absolute;
+        top: 0;
+        left: 45%;
+    }
+
+    .youtube .youbox {
+        width: 100%;
+        height: 55%;
+    }
+
+    .youtube a>span {
+        bottom: 0;
+    }
+
+    .letter .newstext h1 {
+        font-size: 2rem;
+    }
+
+    .letter .newstext p {
+        font-size: 1rem;
+    }
+
+    .letter input {
+        width: 165px;
+        height: 45px;
+        font-size: .8rem;
+    }
+
+    /* click 했을 떄 벨루 사라지게 */
+    .letter button {
+        left: 65%;
+        width: 65px;
+        height: 65px;
+        font-size: .8rem;
+    }
+    /* 900끝 */
+
+}
+
+@media screen and (max-width:767px) {
+
+    /* menu삭제 */
+    header {
+        height: 10vh;
+    }
+
+
+    header .menu {
+        display: none;
+    }
+
+    header .col-2 button {
+        display: none;
+    }
+
+    header .ham button {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .main .topbox .toptext h3 {
+        margin: 5% 0;
+        font-size: 3rem;
+    }
+
+    .main .topbox .toptext p {
+        display: none;
+    }
+
+    .news {
+        margin-left: 0;
+        margin: auto;
+    }
+    .news .position{
+        margin-left: 10%;
+    }
+
+    .newsbox {
+        width: 100%;
+        margin: auto;
+        display: block;
+        }
+
+    .newsbox .box {
+        transition: 0;
+        width: 80%;
+        margin: 10% auto;
+    }
+    .news figure img {
+        opacity: 1;
+    }
+
+    .newsbox figure{
+        margin: auto;
+    }
+    .newsbox figure img {
+        transition: 0;
+    }
+
+    .newsbox .textbox h6 {
+        font-weight: 900;
+        margin: 5% 0;
+    }
+
+    .newsbox .textbox p {
+        font-size: 1.5rem;
+    }
+    .newsbox .textbox span{
+        margin-top: 5%;
+        margin: 5% 0;
+    }
+
+    .coming .box {
+        width: 80%;
+        margin: auto;
+    }
+
+    .coming .box figure {
+        margin: auto;
+    }
+
+    .coming .text {
+        margin-left: 10%;
+    }
+
+    .coming .text p {
+        color: #808080;
+        margin-bottom: 10%;
+    }
+
+    .vision .p {
+        font-size: 1.1rem;
+    }
+
+
+    .vision h4 {
+        font-size: 1rem;
+        line-height: 35px;
+    }
+
+    .vision .box2 ul {
+        font-size: .8rem;
+    }
+
+    .vision .box2 .list .box {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 30px;
+    }
+
+    .vision .box2 .list .line {
+        width: 3px;
+        height: 160px;
+    }
+
+    .letter .newstext h1 {
+        font-size: 1.5rem;
+    }
+
+    .letter .newstext p {
+        font-size: .8rem;
+    }
+
+    .letter input {
+        width: 120px;
+        height: 35px;
+        font-size: .5rem;
+    }
+
+    /* click 했을 떄 벨루 사라지게 */
+    .letter button {
+        left: 55%;
+        top: -5%;
+        width: 40px;
+        height: 40px;
+        font-size: .4rem;
+    }
+    .slidebox .allbox{
+        width: 90%;
+    margin: auto;
+    }
+    footer {
+        width: 100%;
+        height: 45vh;
+        border-top: 1px solid rgb(255, 166, 0);
+        position: relative;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    footer .flogo {
+        display: block;
+        width: 100%;
+        height: 20%;
+        float: none;
+    }
+
+    footer .flogo img {
+        margin: 5% auto;
+    }
+
+    footer .ftext {
+        display: block;
+        height: 0;
+        margin-top: 0%;
+    }
+
+    footer .ftext ul {
+        width: 100%;
+        height: 40px;
+        margin-right: 0;
+        font-size: 1rem;
+        line-height: 50px;
+    }
+
+    footer .ftext ul li {
+        float: left;
+        margin: 0 3%;
+    }
+
+    footer .f_menu {
+        border-top: 1px solid rgb(255, 166, 0);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    footer .ftext .sns {
+        display: none;
+    }
+
+    footer .copy {
+        position: absolute;
+        top: 40%;
+        left:10%;
+        margin-top: 3%;
+    }
+
+    footer .copy span {
+        font-size: 1rem;
+    }
+
+    footer .copy p {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .main .topbox .toptext h3 {
+        margin: 3% 0;
+        font-size: 2.5rem;
+    }
+    
+    .newsbox .box {
+        transition: 0;
+        width: 70%;
+        margin: 10% auto;
+        margin-left: 10%;
+    }
+
+    .letter {
+        display: none;
+    }
+    footer .ftext ul {
+        width: 100%;
+        height: 40px;
+        margin-right: 0;
+        font-size: .9rem;
+        line-height: 50px;
+    }
+
+    footer .ftext ul li {
+        float: left;
+        margin: 0 3%;
+    }
+
+}
+
+@media screen and (max-width:610px) {
+    .coming {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:575px) {
+
+    nav {
+        top: 10%;
+    }
+
+    nav .search input {
+        width: 140px;
+        height: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: #808080;
+    }
+
+    nav ul li {
+        font-size: .9rem;
+    }
+
+    nav .search p {
+        font-size: 1rem;
+
+    }
+
+    /* 비전 col변경 */
+    .news .title h2 {
+        font-size: 1.5rem;
+    }
+
+    .news .title .circle {
+        top: 10px;
+    }
+
+    .coming .title h2 {
+        font-size: 1.5rem;
+    }
+
+    .coming .title .circle {
+        top: 10px;
+    }
+
+    .vision .title h2 {
+        font-size: 1.5rem;
+    }
+
+    .vision .title .circle {
+        top: 10px;
+    }
+
+    .vision .box1 {
+        margin-bottom: 10%;
+    }
+    .vision h4{
+        text-align: center;
+    }
+
+    .youtube .title h2 {
+        font-size: 1.5rem;
+    }
+
+    .youtube .title .circle {
+        top: 10px;
+    }
+
+    .spon .title h2 {
+        font-size: 1.5rem;
+    }
+
+    .spon .title .circle1 {
+        width: 20Px;
+        height: 20px;
+        left: 140px;
+    }
+    
+    .spon .title .circle2 {
+        width: 10Px;
+        height: 10px;
+        top: 35px;
+        left:135px;
+    }
+
+    .main .topbox .toptext h3 {
+        margin: 5% 0;
+        font-size: 2rem;
+    }
+
+    .youtube .youbox {
+        margin: auto;
+        width: 90%;
+        height: 100%;
+    }
+
+    .youtube h5 {
+        margin-left: 5%;
+    }
+
+    .youtube a>span {
+        position: absolute;
+        left: 7%;
+        bottom: -35%;
+        color: #808080;
+    }
+
+}
+
+
+@media screen and (max-width:560px) {
+    footer ul {
+        display: none;
+    }
+    footer{
+        height: 40vh;
+    }
+}
+@media screen and (max-width:450px){
+    .main .topbox .toptext h3 {
+        margin: 5% 5%;
+        font-size: 1.6rem;
+    }
+    nav{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    header .ham button {
+      font-size: .8rem;
+    }    
+    nav .search input {
+        width: 140px;
+        height: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: #808080;
+    }
+    nav ul li {
+        font-size: .8rem;
+    }
+
+    nav .search p {
+        font-size: 1rem;
+    }
+    .main .topbox .toptext h3 {
+        margin: 5% 5%;
+        font-size: 1.3rem;
+    }
+    
+    footer .copy {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        margin-top: -5%;
+    }
+
+}
